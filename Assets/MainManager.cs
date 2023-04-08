@@ -18,8 +18,9 @@ public class MainManager : MonoBehaviour
     [SerializeField]
     private GameObject GameStartText;
 
-    public Color32 currentColor;
+    public Color32 checkColor;
     public Color32 targetColor;
+
 
     // Start is called before the first frame update
     private void Start()
@@ -30,6 +31,16 @@ public class MainManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+    }
+
+    public void CheckColor()
+    {
+        int Rdif = targetColor.r - checkColor.r;
+        int Gdif = targetColor.g - checkColor.g;
+        int Bdif = targetColor.b - checkColor.b;
+        // Debug.Log("rdif" + Rdif);
+        //  Debug.Log("gdif" + Gdif);
+        //  Debug.Log("bdif" + Bdif);
     }
 
     public void GameStart()
