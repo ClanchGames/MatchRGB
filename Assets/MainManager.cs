@@ -61,4 +61,22 @@ public class MainManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    [SerializeField] GameObject MessageWindow;
+    public string messageText { get; set; }
+
+    public void RGBErrorMessage()
+    {
+        messageText = "Check if RGB number is correct.";
+        ShowMessage();
+        Invoke("HideMessage", 2f);
+    }
+    public void ShowMessage()
+    {
+        MessageWindow.SetActive(true);
+    }
+    public void HideMessage()
+    {
+        MessageWindow.SetActive(false);
+    }
 }

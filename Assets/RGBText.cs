@@ -36,11 +36,23 @@ public class RGBText : MonoBehaviour
     {
         int rgbint = int.Parse(text);
         byte rgbbyte = (byte)rgbint;
+        if (rgbint > 255)
+        {
+            Debug.Log(rgbint);
+            main.RGBErrorMessage();
+            return;
+        }
         if (rgb == RGB.R)
+        {
             main.checkColor.r = rgbbyte;
+        }
         if (rgb == RGB.G)
+        {
             main.checkColor.g = rgbbyte;
+        }
         if (rgb == RGB.B)
+        {
             main.checkColor.b = rgbbyte;
+        }
     }
 }

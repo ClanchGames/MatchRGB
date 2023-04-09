@@ -31,8 +31,8 @@ public class TargetColor : MonoBehaviour
         image.color = new Color32((byte)r, (byte)g, (byte)b, 255);
         main.targetColor = image.color;
 
-        Debug.Log("r:" + r + " g:" + g + " b:" + b);
-        Debug.Log("r:" + (byte)r + " g:" + (byte)g + " b:" + (byte)b);
+        //Debug.Log("r:" + r + " g:" + g + " b:" + b);
+        // Debug.Log("r:" + (byte)r + " g:" + (byte)g + " b:" + (byte)b);
         // Debug.Log(image.color);
     }
 }
