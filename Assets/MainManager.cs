@@ -79,4 +79,13 @@ public class MainManager : MonoBehaviour
     {
         MessageWindow.SetActive(false);
     }
+    [SerializeField] GameObject CorrectRGBArea;
+    public void ShowCorrectRGB()
+    {
+        CorrectRGBArea.SetActive(true);
+    }
+    public void HideCorrectRGB()
+    {
+        CorrectRGBArea.SetActive(false);
+    }
 }

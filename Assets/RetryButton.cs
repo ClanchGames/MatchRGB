@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static MainManager;
-public class CheckButton : MonoBehaviour
+
+public class RetryButton : MonoBehaviour
 {
-    string checkColorObjectName = "CheckColor";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +19,6 @@ public class CheckButton : MonoBehaviour
     }
     void OnClick()
     {
-        GameObject.Find(checkColorObjectName).GetComponent<CheckColor>().ChangeColor();
-        main.CheckColor();
-        main.ShowCorrectRGB();
+        MainManager.main.Restart();
     }
 }

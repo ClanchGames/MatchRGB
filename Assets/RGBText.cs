@@ -34,14 +34,14 @@ public class RGBText : MonoBehaviour
 
     void OnEndEdit(string text)
     {
-        int rgbint = int.Parse(text);
-        byte rgbbyte = (byte)rgbint;
-        if (rgbint > 255)
+        int rgbint;
+        if (!int.TryParse(text, out rgbint) || rgbint > 255)
         {
             Debug.Log(rgbint);
             main.RGBErrorMessage();
             return;
         }
+        byte rgbbyte = (byte)rgbint;
         if (rgb == RGB.R)
         {
             main.checkColor.r = rgbbyte;
