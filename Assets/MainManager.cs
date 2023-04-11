@@ -21,6 +21,8 @@ public class MainManager : MonoBehaviour
     public Color32 checkColor;
     public Color32 targetColor;
 
+    public bool isEditColor { get; set; }
+
 
     // Start is called before the first frame update
     private void Start()

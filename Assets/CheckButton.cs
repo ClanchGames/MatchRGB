@@ -19,6 +19,11 @@ public class CheckButton : MonoBehaviour
     }
     void OnClick()
     {
+        if (!main.isEditColor)
+        {
+            main.RGBErrorMessage();
+            return;
+        }
         GameObject.Find(checkColorObjectName).GetComponent<CheckColor>().ChangeColor();
         main.CheckColor();
         main.ShowCorrectRGB();

@@ -30,6 +30,10 @@ public class RGBText : MonoBehaviour
     private void Update()
     {
         //text.text = MainManager.main.settingColor.r.ToString();
+        if (input.text == "")
+        {
+            main.isEditColor = false;
+        }
     }
 
     void OnEndEdit(string text)
@@ -37,7 +41,10 @@ public class RGBText : MonoBehaviour
         int rgbint;
         if (!int.TryParse(text, out rgbint) || rgbint > 255)
         {
-            Debug.Log(rgbint);
+            if (text == "")
+            {
+                return;
+            }
             main.RGBErrorMessage();
             return;
         }
@@ -54,5 +61,6 @@ public class RGBText : MonoBehaviour
         {
             main.checkColor.b = rgbbyte;
         }
+        main.isEditColor = true;
     }
 }

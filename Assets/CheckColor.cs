@@ -23,9 +23,5 @@ public class CheckColor : MonoBehaviour
     {
         MainManager.main.checkColor.a = 255;
         image.color = MainManager.main.checkColor;
-        Debug.Log(image.color);
-        Debug.Log((byte)image.color.r);
-        Debug.Log((byte)image.color.g);
-        Debug.Log((byte)image.color.b);
     }
 }
